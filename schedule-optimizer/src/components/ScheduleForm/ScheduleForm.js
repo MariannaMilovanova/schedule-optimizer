@@ -35,13 +35,12 @@ class ScheduleForm extends Component {
   };
 
   render() {
-    console.log(this.props);
-    const { handleSubmit, change } = this.props;
+    const { handleSubmit, change, img, customStyle } = this.props;
     return (
-      <div className={b(block)}>
+      <div className={b(block)} style={{ ...customStyle }}>
         <div className={b(block, 'image-wrapper')}>
           <div className={b(block, 'image')}>
-            <img src={desired} alt="img" />
+            <img src={img} alt="img" />
           </div>
         </div>
         <div className={b(block, 'header')}>
@@ -79,7 +78,7 @@ class ScheduleForm extends Component {
                 />
               </div>
               <Field
-                label="Morning coffee at"
+                label="Morning coffee/tea at"
                 name="coffeeStart"
                 changeTime={this.changeCroppedTime}
                 component={field => renderField(field, this.state.cropedTime)}

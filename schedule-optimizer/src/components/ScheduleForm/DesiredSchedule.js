@@ -3,7 +3,11 @@ import desired from '../../img/desired.jpg';
 import ScheduleForm from './ScheduleForm';
 
 const DesiredSchedule = props => (
-  <ScheduleForm customStyle={{ backgroundColor: 'blue' }} img={desired} />
+  <ScheduleForm
+    customStyle={{ backgroundColor: '#99cc67' }}
+    img={desired}
+    header={'Enter your ideal work-live schedule'}
+  />
 );
 
 export default DesiredSchedule;
