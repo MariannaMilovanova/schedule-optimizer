@@ -4,6 +4,16 @@
   justify-content: center;
   font-family: 'Open Sans', sans-serif;
   height: 100%;
+  position: relative;
+}
+.ScheduleForm__home-logo {
+  position: absolute;
+  width: 50px;
+  top: 10px;
+  left: 15px;
+}
+.ScheduleForm__home-logo img {
+  width: 100%;
 }
 .ScheduleForm .form-group {
   margin-bottom: 12px;

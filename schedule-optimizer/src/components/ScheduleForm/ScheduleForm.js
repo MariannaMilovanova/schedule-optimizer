@@ -4,13 +4,13 @@ import { Field, FieldArray, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-import desired from '../../img/desired.jpg';
 import { FIELDS, timeArray } from './subData';
 import { renderField, renderTimeSpend } from './renderFields';
 import { addSchedule } from '../../actions';
 import { b, createBlock } from '../../helpers/bem';
 import { withRouter } from 'react-router-dom';
 import 'react-widgets/dist/css/react-widgets.css';
+import home from '../../img/home.png';
 
 const block = createBlock('ScheduleForm');
 
@@ -23,8 +23,8 @@ class ScheduleForm extends Component {
     };
   }
   onSubmit = values => {
-    this.props.addSchedule(values, 'desired');
-    return this.props.history.push('/');
+    this.props.addSchedule(values, this.props.type);
+    return this.props.history.push('/graph');
   };
 
   changeCroppedTime = time => {
@@ -35,17 +35,18 @@ class ScheduleForm extends Component {
   };
 
   render() {
-    const { handleSubmit, change, img, customStyle } = this.props;
+    const { handleSubmit, change, img, customStyle, header } = this.props;
     return (
       <div className={b(block)} style={{ ...customStyle }}>
+        <Link to="/" className={b(block, 'home-logo')}>
+          <img src={home} alt="home" />{' '}
+        </Link>
         <div className={b(block, 'image-wrapper')}>
           <div className={b(block, 'image')}>
             <img src={img} alt="img" />
           </div>
         </div>
-        <div className={b(block, 'header')}>
-          Enter your ideal work-live schedule
-        </div>
+        <div className={b(block, 'header')}>{header}</div>
         <div className={b(block, 'wrapper')}>
           <form
             onSubmit={handleSubmit(this.onSubmit.bind(this))}

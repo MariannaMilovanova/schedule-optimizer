@@ -11,7 +11,7 @@ export default function(state = {}, action) {
       );
       const newSchedule =
         scheduleType === 'desired' ? { desired: newData } : { real: newData };
-      return { ...newSchedule };
+      return { ...state, ...newSchedule };
     }
     default:
       return state;

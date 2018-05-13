@@ -6,6 +6,7 @@ const DesiredSchedule = props => (
   <ScheduleForm
     customStyle={{ backgroundColor: '#99cc67' }}
     img={desired}
+    type={'desired'}
     header={'Enter your ideal work-live schedule'}
   />
 );
