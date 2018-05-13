@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ScheduleForm from './components/ScheduleForm/ScheduleForm';
+import DesiredSchedule from './components/ScheduleForm/DesiredSchedule';
+import RealSchedule from './components/ScheduleForm/RealSchedule';
+import HomePage from './components/HomePage/HomePage';
 import logger from 'redux-logger';
 import reducers from './reducers';
 import './style/index.css';
@@ -15,7 +17,9 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
-          <Route path="/" component={ScheduleForm} />
+          <Route path="/desired" component={DesiredSchedule} />
+          <Route path="/real" component={RealSchedule} />
+          <Route path="/" component={HomePage} />
         </Switch>
       </div>
     </BrowserRouter>

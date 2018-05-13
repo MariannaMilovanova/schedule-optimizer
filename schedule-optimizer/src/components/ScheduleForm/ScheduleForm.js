@@ -9,6 +9,7 @@ import { FIELDS, timeArray } from './subData';
 import { renderField, renderTimeSpend } from './renderFields';
 import { addSchedule } from '../../actions';
 import { b, createBlock } from '../../helpers/bem';
+import { withRouter } from 'react-router-dom';
 import 'react-widgets/dist/css/react-widgets.css';
 
 const block = createBlock('ScheduleForm');
@@ -34,6 +35,7 @@ class ScheduleForm extends Component {
   };
 
   render() {
+    console.log(this.props);
     const { handleSubmit, change } = this.props;
     return (
       <div className={b(block)}>
@@ -200,8 +202,10 @@ function validate(values) {
   return errors;*/
 }
 
-export default reduxForm({
-  validate,
-  form: 'ScheduleNewForm',
-  fields: _.keys(FIELDS)
-})(connect(null, { addSchedule })(ScheduleForm));
+export default withRouter(
+  reduxForm({
+    validate,
+    form: 'ScheduleNewForm',
+    fields: _.keys(FIELDS)
+  })(connect(null, { addSchedule })(ScheduleForm))
+);
