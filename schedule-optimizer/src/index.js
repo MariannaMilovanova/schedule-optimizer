@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ScheduleForm from './components/ScheduleForm/ScheduleForm';
 import logger from 'redux-logger';
 import reducers from './reducers';
+import './style/index.css';
 
 const createStoreWithMiddleware = applyMiddleware(logger)(createStore);
 

@@ -1,118 +1,190 @@
 import React, { Component } from 'react';
 import './ScheduleForm.css';
-import { Field, reduxForm, FieldArray } from 'redux-form';
+import { Field, FieldArray, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import desired from '../../img/desired.jpg';
 import { FIELDS, timeArray } from './subData';
-import { renderTimeSpend } from './renderFields';
-import { DropdownList } from 'react-widgets';
+import { renderTimeSpend, renderField } from './renderFields';
+import { addSchedule } from '../../actions';
+import { b, createBlock } from '../../helpers/bem';
 import 'react-widgets/dist/css/react-widgets.css';
 
+const block = createBlock('ScheduleForm');
+
 class ScheduleForm extends Component {
-  renderField(field, change) {
-    const {
-      meta: { touched, error }
-    } = field;
-    const className = `schedule-form__field ${
-      touched && error ? 'has-danger' : ''
-    }`;
-    return (
-      <div className={className}>
-        {(() => {
-          switch (field.input.name) {
-            case 'sleepTimeFrom':
-            case 'sleepTimeTo':
-            case 'wakeUp':
-              return (
-                <div className="schedule-form__field-block">
-                  <label className="schedule-form__field-label">
-                    {field.label}
-                  </label>
-                  <DropdownList
-                    valueField="value"
-                    textField="label"
-                    {...field.input}
-                    data={timeArray}
-                    onChange={time => change(field.input.name, time.value)}
-                  />
-                </div>
-              );
-            default:
-              return (
-                <div className="schedule-form__field-block">
-                  <label className="schedule-form__field-label">
-                    {field.label}
-                  </label>
-                  <input
-                    className="schedule-form__form-input"
-                    {...field.input}
-                    type="text"
-                  />
-                </div>
-              );
-          }
-        })()}
-        <div className="text-help">{touched ? error : ''}</div>
-      </div>
-    );
+  constructor(props) {
+    super(props);
+    this.state = {
+      timeArray,
+      cropedTime: timeArray
+    };
   }
   onSubmit(values) {
-    /*this.props.createPost(values, () => {
-      this.props.history.push('/');
-    });*/
+    this.props.addSchedule(values, 'desired');
+    return this.props.history.push('/');
   }
 
   render() {
     const { handleSubmit, change } = this.props;
     return (
-      <div className="schedule-form">
-        <div className="schedule-form__image-wrapper">
-          <div className="schedule-form__image">
+      <div className={b(block)}>
+        <div className={b(block, 'image-wrapper')}>
+          <div className={b(block, 'image')}>
             <img src={desired} alt="img" />
           </div>
         </div>
-        <div className="schedule-form__header">
+        <div className={b(block, 'header')}>
           Enter your ideal work-live schedule
         </div>
-        <div className="schedule-form__wrapper">
+        <div className={b(block, 'wrapper')}>
           <form
             onSubmit={handleSubmit(this.onSubmit.bind(this))}
-            className="schedule-form__form"
+            className={b(block, 'form')}
           >
             <div>
-              <label className="schedule-form__fields-group-label">
-                Sleep Time
+              <Field
+                label="Wake up at"
+                name="wakeUp"
+                component={field =>
+                  renderField(field, change, this.state.cropedTime)
+                }
+              />
+              <label className={b(block, 'fields-group-label')}>
+                Time in transport to work
               </label>
-              <div className="schedule-form__fields-group">
+              <div className={b(block, 'fields-group')}>
                 <Field
                   label="From:"
-                  name="sleepTimeFrom"
-                  component={field => this.renderField(field, change)}
+                  name="timeAtTransportStart"
+                  component={field =>
+                    renderField(field, change, this.state.cropedTime)
+                  }
                 />
                 <Field
                   label="To:"
-                  name="sleepTimeTo"
-                  component={field => this.renderField(field, change)}
+                  name="timeAtTransportEnd"
+                  component={field =>
+                    renderField(field, change, this.state.cropedTime)
+                  }
                 />
               </div>
               <Field
-                label="Wake up time"
-                name="wakeUp"
-                component={field => this.renderField(field, change)}
+                label="Morning coffee at"
+                name="coffeeStart"
+                component={field =>
+                  renderField(field, change, this.state.cropedTime)
+                }
+              />
+              <Field
+                label="Start work flow at"
+                name="startingWorkFlow"
+                component={field =>
+                  renderField(field, change, this.state.cropedTime)
+                }
+              />
+              <label className={b(block, 'fields-group-label')}>
+                Stand up meeting
+              </label>
+              <div className={b(block, 'fields-group')}>
+                <Field
+                  label="From:"
+                  name="standUpMeetingStart"
+                  component={field =>
+                    renderField(field, change, this.state.cropedTime)
+                  }
+                />
+                <Field
+                  label="To:"
+                  name="standUpMeetingEnd"
+                  component={field =>
+                    renderField(field, change, this.state.cropedTime)
+                  }
+                />
+              </div>
+              <Field
+                label="Back to flow"
+                name="backToFlow"
+                component={field =>
+                  renderField(field, change, this.state.cropedTime)
+                }
+              />
+              <label className={b(block, 'fields-group-label')}>
+                Lunch Time
+              </label>
+              <div className={b(block, 'fields-group')}>
+                <Field
+                  label="From:"
+                  name="lunchStart"
+                  component={field =>
+                    renderField(field, change, this.state.cropedTime)
+                  }
+                />
+                <Field
+                  label="To:"
+                  name="lunchEnd"
+                  component={field =>
+                    renderField(field, change, this.state.cropedTime)
+                  }
+                />
+              </div>
+              <Field
+                label="Back to flow after lunch"
+                name="backToFlowAfterLunch"
+                component={field =>
+                  renderField(field, change, this.state.cropedTime)
+                }
+              />
+              <Field
+                label="Productive flow after lunch starts"
+                name="productiveFlowAfterLunchStarts"
+                component={field =>
+                  renderField(field, change, this.state.cropedTime)
+                }
               />
             </div>
-            <FieldArray
-              change={change}
-              name="additional"
-              component={renderTimeSpend}
+            <label className={b(block, 'fields-group-label')}>
+              Transport to home
+            </label>
+            <div className={b(block, 'fields-group')}>
+              <Field
+                label="From:"
+                name="transportToHomeStart"
+                component={field =>
+                  renderField(field, change, this.state.cropedTime)
+                }
+              />
+              <Field
+                label="To:"
+                name="transportToHomeEnds"
+                component={field =>
+                  renderField(field, change, this.state.cropedTime)
+                }
+              />
+            </div>
+            <Field
+              label="Fall asleep"
+              name="fallAsleep"
+              component={field =>
+                renderField(field, change, this.state.cropedTime)
+              }
             />
-            <div className="schedule-form__buttons">
-              <button type="submit" className="btn btn-primary">
+            <div className={b(block, 'additional-block')}>
+              <div className={b(block, 'additional-label')}>
+                Additional timespent like coffee, meetings, gym, etc.
+              </div>
+              <FieldArray
+                change={change}
+                name="additional"
+                component={renderTimeSpend}
+              />
+            </div>
+            <div className={b(block, 'buttons')}>
+              <button type="submit" className={b(block, 'submit-btn')}>
                 Submit
               </button>
-              <Link to="/" className="btn btn-danger">
+              <Link to="/" className={b(block, 'cancel-btn')}>
                 Cancel
               </Link>
             </div>
@@ -128,7 +200,7 @@ function validate(values) {
   //Validate the input from 'values
   _.each(FIELDS, (value, key) => {
     if (!values[key]) {
-      errors[key] = `Enter a ${key}`;
+      errors[key] = value.label;
     }
   });
   return errors;
@@ -138,4 +210,4 @@ export default reduxForm({
   validate,
   form: 'ScheduleNewForm',
   fields: _.keys(FIELDS)
-})(connect(null, {})(ScheduleForm));
+})(connect(null, { addSchedule })(ScheduleForm));

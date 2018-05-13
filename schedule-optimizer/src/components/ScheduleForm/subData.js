@@ -1,27 +1,75 @@
 export const FIELDS = {
-  sleepTimeFrom: {
-    label: 'Your sleeping time'
-  },
-  sleepTimeTo: {
-    label: 'Your sleeping time'
-  },
-  //убрать это время
   wakeUp: {
-    label: 'Wake up time'
+    label: 'Enter wake up time'
   },
-  timeAtTransport: {
-    label: 'Time spend in transport'
+  timeAtTransportStart: {
+    label: 'Enter time spend in transport'
   },
-  meansOfTransport: {
-    label: 'Time spend in transport'
+  timeAtTransportEnd: {
+    label: 'Enter time spend in transport'
   },
   coffeeStart: {},
   startingWorkFlow: {},
-  standUpMeeting: {},
-  lunch: {},
-  workEnds: {},
-  goHome: {}
+  standUpMeetingStart: {},
+  standUpMeetingEnd: {},
+  backToFlow: {},
+  lunchStart: {},
+  lunchEnd: {},
+  backToFlowAfterLunch: {},
+  productiveFlowAfterLunchStarts: {},
+  transportToHomeStart: {},
+  transportToHomeEnds: {},
+  fallAsleep: {}
 };
+
+export const meansOfTransport = ['car', 'bicycle', 'public transport'];
+
+export const timeIntervals = [
+  {
+    label: '0 min',
+    value: 0
+  },
+  {
+    label: '5 min',
+    value: 0
+  },
+  {
+    label: '10 min',
+    value: 0
+  },
+  {
+    label: '15 min',
+    value: 0
+  },
+  {
+    label: '30 min',
+    value: 0
+  },
+  {
+    label: '45 min',
+    value: 0
+  },
+  {
+    label: '1 hour',
+    value: 0
+  },
+  {
+    label: '1.5 hour',
+    value: 0
+  },
+  {
+    label: '2 hours',
+    value: 0
+  },
+  {
+    label: '2.5 hours',
+    value: 0
+  },
+  {
+    label: '3 hours',
+    value: 0
+  }
+];
 
 export const timeArray = [
   {
