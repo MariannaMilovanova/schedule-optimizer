@@ -7,8 +7,9 @@ import 'react-widgets/dist/css/react-widgets.css';
 
 const block = createBlock('ScheduleForm');
 
-export const renderField = (field, change, time) => {
+export const renderField = (field, time) => {
   const {
+    changeTime,
     meta: { touched, error }
   } = field;
   const className = `${b(block, 'field')} ${
@@ -18,13 +19,40 @@ export const renderField = (field, change, time) => {
     <div className={className}>
       <div className={b(block, 'field-block')}>
         <label className={b(block, 'field-label')}>{field.label}</label>
-        <DropdownList
-          valueField="value"
-          textField="label"
-          {...field.input}
-          data={time}
-          onChange={time => change(field.input.name, time.value)}
-        />
+        {(() => {
+          switch (field.input.name) {
+            case 'wakeUp':
+              return (
+                <DropdownList
+                  valueField="value"
+                  textField="label"
+                  {...field.input}
+                  data={timeArray}
+                  onChange={time => {
+                    if (changeTime) {
+                      changeTime(time);
+                    }
+                    field.input.onChange(time);
+                  }}
+                />
+              );
+            default:
+              return (
+                <DropdownList
+                  valueField="value"
+                  textField="label"
+                  {...field.input}
+                  data={time}
+                  onChange={time => {
+                    if (changeTime) {
+                      changeTime(time);
+                    }
+                    field.input.onChange(time);
+                  }}
+                />
+              );
+          }
+        })()}
       </div>
       <div className={b(block, 'text-help')}>{touched ? error : ''}</div>
     </div>

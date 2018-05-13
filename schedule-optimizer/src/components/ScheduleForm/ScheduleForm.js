@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import _ from 'lodash';
 import desired from '../../img/desired.jpg';
 import { FIELDS, timeArray } from './subData';
-import { renderTimeSpend, renderField } from './renderFields';
+import { renderField, renderTimeSpend } from './renderFields';
 import { addSchedule } from '../../actions';
 import { b, createBlock } from '../../helpers/bem';
 import 'react-widgets/dist/css/react-widgets.css';
@@ -21,10 +21,17 @@ class ScheduleForm extends Component {
       cropedTime: timeArray
     };
   }
-  onSubmit(values) {
+  onSubmit = values => {
     this.props.addSchedule(values, 'desired');
     return this.props.history.push('/');
-  }
+  };
+
+  changeCroppedTime = time => {
+    const { timeArray } = this.state;
+    this.setState({
+      cropedTime: _.partition(timeArray, item => item.value >= time.value)[0]
+    });
+  };
 
   render() {
     const { handleSubmit, change } = this.props;
@@ -47,8 +54,9 @@ class ScheduleForm extends Component {
               <Field
                 label="Wake up at"
                 name="wakeUp"
+                changeTime={this.changeCroppedTime}
                 component={field =>
-                  renderField(field, change, this.state.cropedTime)
+                  renderField(field, this.state.cropedTime, change)
                 }
               />
               <label className={b(block, 'fields-group-label')}>
@@ -58,31 +66,27 @@ class ScheduleForm extends Component {
                 <Field
                   label="From:"
                   name="timeAtTransportStart"
-                  component={field =>
-                    renderField(field, change, this.state.cropedTime)
-                  }
+                  changeTime={this.changeCroppedTime}
+                  component={field => renderField(field, this.state.cropedTime)}
                 />
                 <Field
                   label="To:"
                   name="timeAtTransportEnd"
-                  component={field =>
-                    renderField(field, change, this.state.cropedTime)
-                  }
+                  changeTime={this.changeCroppedTime}
+                  component={field => renderField(field, this.state.cropedTime)}
                 />
               </div>
               <Field
                 label="Morning coffee at"
                 name="coffeeStart"
-                component={field =>
-                  renderField(field, change, this.state.cropedTime)
-                }
+                changeTime={this.changeCroppedTime}
+                component={field => renderField(field, this.state.cropedTime)}
               />
               <Field
                 label="Start work flow at"
                 name="startingWorkFlow"
-                component={field =>
-                  renderField(field, change, this.state.cropedTime)
-                }
+                changeTime={this.changeCroppedTime}
+                component={field => renderField(field, this.state.cropedTime)}
               />
               <label className={b(block, 'fields-group-label')}>
                 Stand up meeting
@@ -91,24 +95,21 @@ class ScheduleForm extends Component {
                 <Field
                   label="From:"
                   name="standUpMeetingStart"
-                  component={field =>
-                    renderField(field, change, this.state.cropedTime)
-                  }
+                  changeTime={this.changeCroppedTime}
+                  component={field => renderField(field, this.state.cropedTime)}
                 />
                 <Field
                   label="To:"
                   name="standUpMeetingEnd"
-                  component={field =>
-                    renderField(field, change, this.state.cropedTime)
-                  }
+                  changeTime={this.changeCroppedTime}
+                  component={field => renderField(field, this.state.cropedTime)}
                 />
               </div>
               <Field
                 label="Back to flow"
                 name="backToFlow"
-                component={field =>
-                  renderField(field, change, this.state.cropedTime)
-                }
+                changeTime={this.changeCroppedTime}
+                component={field => renderField(field, this.state.cropedTime)}
               />
               <label className={b(block, 'fields-group-label')}>
                 Lunch Time
@@ -117,31 +118,27 @@ class ScheduleForm extends Component {
                 <Field
                   label="From:"
                   name="lunchStart"
-                  component={field =>
-                    renderField(field, change, this.state.cropedTime)
-                  }
+                  changeTime={this.changeCroppedTime}
+                  component={field => renderField(field, this.state.cropedTime)}
                 />
                 <Field
                   label="To:"
                   name="lunchEnd"
-                  component={field =>
-                    renderField(field, change, this.state.cropedTime)
-                  }
+                  changeTime={this.changeCroppedTime}
+                  component={field => renderField(field, this.state.cropedTime)}
                 />
               </div>
               <Field
                 label="Back to flow after lunch"
                 name="backToFlowAfterLunch"
-                component={field =>
-                  renderField(field, change, this.state.cropedTime)
-                }
+                changeTime={this.changeCroppedTime}
+                component={field => renderField(field, this.state.cropedTime)}
               />
               <Field
                 label="Productive flow after lunch starts"
                 name="productiveFlowAfterLunchStarts"
-                component={field =>
-                  renderField(field, change, this.state.cropedTime)
-                }
+                changeTime={this.changeCroppedTime}
+                component={field => renderField(field, this.state.cropedTime)}
               />
             </div>
             <label className={b(block, 'fields-group-label')}>
@@ -151,24 +148,21 @@ class ScheduleForm extends Component {
               <Field
                 label="From:"
                 name="transportToHomeStart"
-                component={field =>
-                  renderField(field, change, this.state.cropedTime)
-                }
+                changeTime={this.changeCroppedTime}
+                component={field => renderField(field, this.state.cropedTime)}
               />
               <Field
                 label="To:"
                 name="transportToHomeEnds"
-                component={field =>
-                  renderField(field, change, this.state.cropedTime)
-                }
+                changeTime={this.changeCroppedTime}
+                component={field => renderField(field, this.state.cropedTime)}
               />
             </div>
             <Field
               label="Fall asleep"
               name="fallAsleep"
-              component={field =>
-                renderField(field, change, this.state.cropedTime)
-              }
+              changeTime={this.changeCroppedTime}
+              component={field => renderField(field, this.state.cropedTime)}
             />
             <div className={b(block, 'additional-block')}>
               <div className={b(block, 'additional-label')}>
@@ -196,14 +190,14 @@ class ScheduleForm extends Component {
 }
 
 function validate(values) {
-  const errors = {};
+  /* const errors = {};
   //Validate the input from 'values
   _.each(FIELDS, (value, key) => {
     if (!values[key]) {
       errors[key] = value.label;
     }
   });
-  return errors;
+  return errors;*/
 }
 
 export default reduxForm({

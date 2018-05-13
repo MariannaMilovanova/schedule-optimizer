@@ -73,6 +73,7 @@
 }
 .ScheduleForm .rw-widget-input {
   background-color: white !important;
+  cursor: pointer;
 }
 .ScheduleForm__submit-btn {
   background-color: #007bff;
