@@ -2,15 +2,6 @@
 //#FFE632 -yellow
 //#0095F3 -blue
 //#FF4385 -rose
-
-.GraphPage {
-  display: flex;
-  justify-content: space-around;
-  padding: 15px;
-  font-family: 'Open Sans', sans-serif;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
 .GraphPage__real,
 .GraphPage__desired {
   height: calc(100vh - 30px);
@@ -33,9 +24,9 @@
 }
 .GraphPage__real-graph,
 .GraphPage__desired-graph {
-  height: calc(100vh - 30px);
   border: 1px solid black;
   width: 42%;
+  position: relative;
 }
 .GraphPage__desired-graph {
   padding: 20px;
@@ -82,7 +73,7 @@
 }
 .GraphPage__color {
   width: 50%;
-  background-color: #0095f3;
+  background-color: #ffe632;
 }
 .GraphPage__empty {
   width: 50%;
@@ -92,4 +83,19 @@
   position: absolute;
   right: -35px;
   top: -8px;
+}
+.GraphPage {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  font-family: 'Open Sans', sans-serif;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.GraphPage__label {
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 11px;
+  left: 150px;
+  top: 17px;
 }

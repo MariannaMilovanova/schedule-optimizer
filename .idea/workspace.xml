@@ -17,8 +17,8 @@
       <file leaf-file-name="ScheduleForm.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ScheduleForm/ScheduleForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -36,24 +36,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScheduleForm.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ScheduleForm/ScheduleForm.css">
+      <file leaf-file-name="GraphPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/GraphPage/GraphPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="136">
+              <caret line="80" column="48" lean-forward="false" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GraphPage.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/GraphPage/GraphPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="70" column="41" lean-forward="false" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="102">
+                <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -95,20 +98,20 @@
       <file leaf-file-name="GraphPage.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/GraphPage/GraphPage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-999">
-              <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+            <state relative-caret-position="342">
+              <caret line="100" column="1" lean-forward="false" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DesiredSchedule.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ScheduleForm/DesiredSchedule.js">
+      <file leaf-file-name="subData.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/ScheduleForm/subData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="20" />
+            <state relative-caret-position="425">
+              <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="12" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#582#4659#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -140,13 +143,13 @@
       <find>block</find>
       <find>startingWorkFlow</find>
       <find>rw</find>
+      <find>100px</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/components/App.js" />
         <option value="$PROJECT_DIR$/src/components/ScheduleForm/Fields.js" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -156,7 +159,6 @@
         <option value="$PROJECT_DIR$/src/helpers/bem.js" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/components/ScheduleForm/renderFields.js" />
-        <option value="$PROJECT_DIR$/src/components/ScheduleForm/subData.js" />
         <option value="$PROJECT_DIR$/src/style/index.css" />
         <option value="$PROJECT_DIR$/src/helpers/history.js" />
         <option value="$PROJECT_DIR$/src/components/HomePage/HomePage.js" />
@@ -167,8 +169,10 @@
         <option value="$PROJECT_DIR$/src/components/ScheduleForm/RealSchedule.js" />
         <option value="$PROJECT_DIR$/src/components/ScheduleForm/ScheduleForm.js" />
         <option value="$PROJECT_DIR$/src/reducers/schedule.js" />
-        <option value="$PROJECT_DIR$/src/components/GraphPage/GraphPage.js" />
         <option value="$PROJECT_DIR$/src/components/GraphPage/GraphPage.css" />
+        <option value="$PROJECT_DIR$/src/components/ScheduleForm/subData.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/components/GraphPage/GraphPage.js" />
       </list>
     </option>
   </component>
@@ -185,13 +189,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="187" />
     <option name="y" value="43" />
-    <option name="width" value="1082" />
+    <option name="width" value="1077" />
     <option name="height" value="633" />
   </component>
   <component name="ProjectView">
@@ -327,18 +328,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526148699924</updated>
-      <workItem from="1526148702077" duration="41135000" />
+      <workItem from="1526148702077" duration="45870000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41135000" />
+    <option name="totallyTimeSpent" value="45870000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="187" y="43" width="1082" height="633" extended-state="0" />
+    <frame x="187" y="43" width="1077" height="633" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32645404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32799247" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -375,17 +376,6 @@
         <state relative-caret-position="102">
           <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -471,16 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ScheduleForm/subData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="74" column="2" lean-forward="false" selection-start-line="74" selection-start-column="2" selection-end-line="74" selection-end-column="2" />
-          <folding>
-            <marker date="1526218215199" expanded="false" signature="610:1090" ph="[...]" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -517,7 +497,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -546,7 +526,7 @@
         <state relative-caret-position="136">
           <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="20" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -568,14 +548,6 @@
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ScheduleForm/ScheduleForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -609,19 +581,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphPage/GraphPage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-999">
-          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        <state relative-caret-position="342">
+          <caret line="100" column="1" lean-forward="false" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ScheduleForm/subData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="12" />
+          <folding>
+            <element signature="e#582#4659#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ScheduleForm/ScheduleForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphPage/GraphPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="70" column="41" lean-forward="false" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+        <state relative-caret-position="136">
+          <caret line="80" column="48" lean-forward="false" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="102">
+            <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
