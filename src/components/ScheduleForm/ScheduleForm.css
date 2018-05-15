@@ -1,0 +1,163 @@
+.ScheduleForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  position: relative;
+}
+.ScheduleForm__home-logo {
+  position: absolute;
+  width: 50px;
+  top: 10px;
+  left: 15px;
+}
+.ScheduleForm__home-logo img {
+  width: 100%;
+}
+.ScheduleForm .form-group {
+  margin-bottom: 12px;
+}
+.ScheduleForm label {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  font-size: 12px;
+  padding-top: 5px;
+}
+.ScheduleForm__image-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+.ScheduleForm__image {
+  width: 300px;
+}
+.ScheduleForm__image img {
+  width: 100%;
+  height: auto;
+}
+.ScheduleForm__header {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-top: 10px;
+}
+.ScheduleForm__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ScheduleForm__form {
+  width: 60%;
+  padding: 20px 0;
+}
+.ScheduleForm__buttons {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+}
+.ScheduleForm__fields-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ScheduleForm__fields-group-label {
+  padding-left: 15px;
+}
+.ScheduleForm__single-field {
+}
+.ScheduleForm__field {
+}
+.ScheduleForm__field-block {
+  padding: 2px 15px;
+}
+.ScheduleForm__form-input {
+  border-radius: 5px;
+}
+.ScheduleForm__field-label {
+  padding-right: 10px;
+  font-size: 12px !important;
+}
+.ScheduleForm .rw-widget-input {
+  background-color: white !important;
+  cursor: pointer;
+}
+.ScheduleForm__submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  padding: 6px 18px;
+  text-transform: uppercase;
+  box-shadow: none;
+}
+.ScheduleForm__cancel-btn {
+  border-radius: 5px;
+  padding: 6px 18px;
+  text-transform: uppercase;
+  box-shadow: none;
+  background-color: #dc3545;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.ScheduleForm__additional-block {
+  padding-top: 25px;
+  padding-left: 15px;
+}
+.ScheduleForm__additional-label {
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.ScheduleForm__add-btn {
+  border: 1px solid white;
+  font-size: 18px;
+  color: #333333;
+  padding: 2px 25px;
+  cursor: pointer;
+  margin-right: 3%;
+}
+.ScheduleForm__additional-name {
+  padding: 9px 15px;
+  max-width: 35%;
+  margin-left: 10px;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+.ScheduleForm__remove-block {
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.ScheduleForm__text-help {
+  font-size: 12px;
+  padding: 0 15px;
+}
+.ScheduleForm__fields-group--additional {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  .ScheduleForm__form {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .ScheduleForm__form {
+    width: 95%;
+  }
+  .ScheduleForm__field-label {
+    padding-right: 3px;
+  }
+}
